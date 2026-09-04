@@ -6,9 +6,9 @@ window.CARS_DATA = [
     "title": "Audi Q5 2.0 TFSI Quattro Tiptronic Advance",
     "slug": "audi-q5-2-0tfsi-quattro-tiptronic-advance-edition",
     "specs": {
-      "precio": "€1€9€.€9€9€0€ €€",
+      "precio": "19.990 €",
       "km": "102.000 km",
-      "año": "17/03/2015",
+      "año": "2015",
       "combustible": "Gasolina",
       "cambio": "Automático Tiptronic",
       "color": "Blanco",
@@ -16,7 +16,7 @@ window.CARS_DATA = [
       "plazas": "5",
       "etiqueta": "C",
       "potencia": "225 CV",
-      "garantia": "Garantía 12 Meses Nacional y Cambio de Nombre incluidos"
+      "garantia": "12 Meses incluida"
     },
     "equipment": [
       "-Tracción Quattro.",
@@ -72,9 +72,9 @@ window.CARS_DATA = [
     "title": "BMW X1 2.0d xDrive M Sport Pro",
     "slug": "bmw-x1-2-0d-xdrive-m-sport-pro",
     "specs": {
-      "precio": "€5€2€.€0€0€0€ €€",
+      "precio": "52.000 €",
       "km": "20.000 km",
-      "año": "Marzo 2024",
+      "año": "2024",
       "combustible": "Diésel Microhíbrido",
       "cambio": "Automático Steptronic",
       "color": "Blanco Mineral",
@@ -82,7 +82,7 @@ window.CARS_DATA = [
       "plazas": "5",
       "etiqueta": "ECO",
       "potencia": "170 CV",
-      "garantia": "Garantía oficial BMW hasta Marzo 2028"
+      "garantia": "Garantía oficial BMW hasta 2028"
     },
     "equipment": [
       "Pantalla táctil multimedia con Apple CarPlay & Android Auto",
@@ -124,9 +124,9 @@ window.CARS_DATA = [
     "title": "Hyundai i10 1.0 MPI Klass",
     "slug": "hyundai-i10-4304-mrr",
     "specs": {
-      "precio": "€1€3€.€6€9€0€ €€",
+      "precio": "13.690 €",
       "km": "15.000 km",
-      "año": "27/04/2022",
+      "año": "2022",
       "combustible": "Gasolina",
       "cambio": "Manual",
       "color": "Blanco Polar",
@@ -134,7 +134,7 @@ window.CARS_DATA = [
       "plazas": "5",
       "etiqueta": "C",
       "potencia": "67 CV",
-      "garantia": "Garantía 12 Meses Nacional y Cambio de Nombre incluidos"
+      "garantia": "12 Meses incluida"
     },
     "equipment": [
       "-8 Airbags",
@@ -214,9 +214,9 @@ window.CARS_DATA = [
     "title": "Kia Picanto 1.0 DPI Concept",
     "slug": "kia-picanto-1-0dpi-concept",
     "specs": {
-      "precio": "€1€4€.€9€9€0€ €€",
+      "precio": "14.990 €",
       "km": "4.000 km",
-      "año": "27/01/2025",
+      "año": "2025",
       "combustible": "Gasolina",
       "cambio": "Manual",
       "color": "Gris Metalizado",
@@ -298,17 +298,17 @@ window.CARS_DATA = [
     "title": "Mazda CX-5 2.0 Skyactiv-G 165CV Homura",
     "slug": "mazda-cx5-2-0-homura",
     "specs": {
-      "precio": "€2€5€.€9€9€0€ €€",
+      "precio": "25.990 €",
       "km": "36.000 km",
-      "año": "15/06/2022",
+      "año": "2022",
       "combustible": "Gasolina Skyactiv-G",
-      "cambio": "Automático 6 vel.",
+      "cambio": "Automático",
       "color": "Soul Red Crystal Metallic",
       "puertas": "5",
       "plazas": "5",
       "etiqueta": "C",
       "potencia": "165 CV",
-      "garantia": "Garantía 12 Meses Nacional y Cambio de Nombre incluidos"
+      "garantia": "12 Meses incluida"
     },
     "equipment": [
       "Alarma de cambio involuntario de carril",
@@ -392,17 +392,17 @@ window.CARS_DATA = [
     "title": "Mitsubishi Eclipse Cross 150T Motion",
     "slug": "mitsibishi-eclipse-cross",
     "specs": {
-      "precio": "€1€6€.€4€9€0€ €€",
+      "precio": "16.490 €",
       "km": "59.000 km",
-      "año": "29/05/2019",
+      "año": "2019",
       "combustible": "Gasolina",
       "cambio": "Manual 6 vel.",
       "color": "Gris Titanio",
-      "puertas": "Asiento del conductor con ajuste de altura",
+      "puertas": "5",
       "plazas": "5",
       "etiqueta": "C",
       "potencia": "163 CV",
-      "garantia": "Garantía 12 Meses Nacional y Cambio de Nombre incluidos"
+      "garantia": "12 Meses incluida"
     },
     "equipment": [
       "Control de crucero y limitador de velocidad",
@@ -496,17 +496,17 @@ window.CARS_DATA = [
     "title": "Nissan Qashqai 1.3 DIG-T 160CV Acenta DCT",
     "slug": "nissan-qashqai-1-3-dig-t-160cv-acenta",
     "specs": {
-      "precio": "€1€8€.€9€9€0€ €€",
+      "precio": "18.990 €",
       "km": "51.000 km",
-      "año": "25/09/2020",
+      "año": "2020",
       "combustible": "Gasolina",
       "cambio": "Automático DCT",
       "color": "Gris Oscuro",
-      "puertas": "Desactivación de airbag del pasajero delantero",
-      "plazas": "Indicador de presión de neumaticos",
+      "puertas": "5",
+      "plazas": "5",
       "etiqueta": "C",
       "potencia": "160 CV",
-      "garantia": "Garantía 12 Meses Nacional y Cambio de Nombre incluidos"
+      "garantia": "12 Meses incluida"
     },
     "equipment": [
       "Navegador + antena tiburón",
@@ -587,17 +587,17 @@ window.CARS_DATA = [
     "title": "Renault Captur Intens TCE 140CV Mild Hybrid",
     "slug": "renault-captur-intens-tce-140cv-mild-hibrido",
     "specs": {
-      "precio": "€1€7€.€4€9€0€ €€",
+      "precio": "17.490 €",
       "km": "59.000 km",
-      "año": "28/01/2022",
+      "año": "2022",
       "combustible": "Gasolina Mild Hybrid",
       "cambio": "Manual 6 vel.",
-      "color": "Blanco Nacardo / Techo Negro",
+      "color": "Blanco Nacarado",
       "puertas": "5",
-      "plazas": "sujeciones isofix",
+      "plazas": "5",
       "etiqueta": "ECO",
       "potencia": "140 CV",
-      "garantia": "Garantía 12 Meses Nacional y Cambio de Nombre incluidos"
+      "garantia": "12 Meses incluida"
     },
     "equipment": [
       "Versión : Intens TCe 103 kW (140CV) GPF mild hybrid -SS",
@@ -673,9 +673,9 @@ window.CARS_DATA = [
     "title": "Renault Kadjar 1.2 TCe Tech Road 130CV",
     "slug": "renault-kadjar-tech-road",
     "specs": {
-      "precio": "€1€4€.€2€0€0€ €€",
+      "precio": "14.200 €",
       "km": "82.000 km",
-      "año": "09/08/2018",
+      "año": "2018",
       "combustible": "Gasolina",
       "cambio": "Manual 6 vel.",
       "color": "Rojo Deseo",
@@ -683,7 +683,7 @@ window.CARS_DATA = [
       "plazas": "5",
       "etiqueta": "C",
       "potencia": "130 CV",
-      "garantia": "Garantía 12 Meses Nacional y Cambio de Nombre incluidos"
+      "garantia": "12 Meses incluida"
     },
     "equipment": [
       "Climatizador bizona",
@@ -755,17 +755,17 @@ window.CARS_DATA = [
     "title": "Renault Megane 1.5 dCi Sport Tourer 115CV",
     "slug": "renault-megane-1-5-dci-sport-tourer-115cv",
     "specs": {
-      "precio": "€1€3€.€4€9€0€ €€",
+      "precio": "13.490 €",
       "km": "83.000 km",
-      "año": "02/12/2020",
+      "año": "2020",
       "combustible": "Diésel",
       "cambio": "Manual 6 vel.",
       "color": "Blanco Glaciar",
       "puertas": "5",
-      "plazas": "Antibloqueo de frenos (ABS)",
+      "plazas": "5",
       "etiqueta": "C",
       "potencia": "115 CV",
-      "garantia": "Garantía 12 Meses Nacional y Cambio de Nombre incluidos"
+      "garantia": "12 Meses incluida"
     },
     "equipment": [
       "Pintura Blanco Glaciar",
@@ -839,9 +839,9 @@ window.CARS_DATA = [
     "title": "Toyota Corolla 1.8 125H Active Tech",
     "slug": "toyota-corolla-9479-lvw",
     "specs": {
-      "precio": "€2€1€.€4€9€0€ €€",
+      "precio": "21.490 €",
       "km": "42.000 km",
-      "año": "13/01/2022",
+      "año": "2022",
       "combustible": "Híbrido Gasolina",
       "cambio": "Automático e-CVT",
       "color": "Gris Manhattan",
@@ -849,7 +849,7 @@ window.CARS_DATA = [
       "plazas": "5",
       "etiqueta": "ECO",
       "potencia": "122 CV",
-      "garantia": "Garantía 12 Meses Nacional y Cambio de Nombre incluidos"
+      "garantia": "12 Meses incluida"
     },
     "equipment": [
       "Climatizador bizona",
@@ -923,7 +923,7 @@ window.CARS_DATA = [
     "title": "Toyota Corolla 1.8 125H Style e-CVT",
     "slug": "toyota-corolla-125h-style-ecvt",
     "specs": {
-      "precio": "€2€0€.€9€0€0€ €€",
+      "precio": "20.900 €",
       "km": "48.000 km",
       "año": "2021",
       "combustible": "Híbrido Gasolina",
@@ -933,7 +933,7 @@ window.CARS_DATA = [
       "plazas": "5",
       "etiqueta": "ECO",
       "potencia": "122 CV",
-      "garantia": "Garantía 12 Meses Nacional y Cambio de Nombre incluidos"
+      "garantia": "12 Meses incluida"
     },
     "equipment": [
       "Llantas de 17&quot;",
@@ -995,17 +995,17 @@ window.CARS_DATA = [
     "title": "Toyota Yaris 120H GR Sport Plus",
     "slug": "toyota-yaris-120h-gr-sport-plus",
     "specs": {
-      "precio": "€2€0€.€9€9€0€ €€",
+      "precio": "20.990 €",
       "km": "52.000 km",
-      "año": "04/01/2023",
+      "año": "2023",
       "combustible": "Híbrido Gasolina",
       "cambio": "Automático e-CVT",
       "color": "Gris Dynamic Bi-tono",
       "puertas": "5",
-      "plazas": "Antibloqueo de frenos (ABS)",
+      "plazas": "5",
       "etiqueta": "ECO",
       "potencia": "116 CV",
-      "garantia": "Garantía Toyota Relax hasta 15 años"
+      "garantia": "Garantía Toyota Relax"
     },
     "equipment": [
       "Tapicería de cuero y Alcantara GR Sport con pespunte rojo",
@@ -1110,17 +1110,17 @@ window.CARS_DATA = [
     "title": "Volkswagen Passat Variant 1.6 TDI 120CV",
     "slug": "vw-passat-variant-1-6-tdi-120cv",
     "specs": {
-      "precio": "€1€7€.€9€9€0€ €€",
+      "precio": "17.990 €",
       "km": "160.000 km",
-      "año": "27/12/2017",
+      "año": "2017",
       "combustible": "Diésel",
       "cambio": "Manual 6 vel.",
       "color": "Negro Profundo",
-      "puertas": "Plazas: 5",
-      "plazas": "E",
+      "puertas": "5",
+      "plazas": "5",
       "etiqueta": "C",
       "potencia": "120 CV",
-      "garantia": "Garantía 12 Meses Nacional y Cambio de Nombre incluidos"
+      "garantia": "12 Meses incluida"
     },
     "equipment": [
       "Llantas de 16&quot;",

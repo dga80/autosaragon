@@ -13,8 +13,23 @@ document.addEventListener('DOMContentLoaded', () => {
   let maxPrice = 60000;
   let sortBy = 'featured';
   let currentCarIndex = 0;
-  let currentGalleryIndex = 0;
   let favorites = JSON.parse(localStorage.getItem('aa_favorites') || '[]');
+
+  // Universal formatting helpers
+  function formatPrice(car) {
+    if (car && car.price_num) {
+      return car.price_num.toLocaleString('es-ES') + ' €';
+    }
+    return (car?.specs?.precio || '20.000 €').replace(/[^\d.]/g, '') + ' €';
+  }
+
+  function formatCuota(car) {
+    if (car && car.cuota && !car.cuota.includes('') && car.cuota.includes('€')) {
+      return car.cuota.replace('Desde ', '');
+    }
+    const p = car?.price_num || 20000;
+    return `${Math.round(p * 0.0115)} €/mes`;
+  }
 
   // DOM Elements
   const carsGrid = document.getElementById('cars-grid');
@@ -130,21 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
       document.getElementById('reset-filters-btn')?.addEventListener('click', resetAllFilters);
       return;
-    }
-
-    function formatPrice(car) {
-      if (car.price_num) {
-        return car.price_num.toLocaleString('es-ES') + ' €';
-      }
-      return (car.specs?.precio || '20.000 €').replace(/[^\d.]/g, '') + ' €';
-    }
-
-    function formatCuota(car) {
-      if (car.cuota && !car.cuota.includes('') && car.cuota.includes('€')) {
-        return car.cuota.replace('Desde ', '');
-      }
-      const p = car.price_num || 20000;
-      return `${Math.round(p * 0.0115)} €/mes`;
     }
 
     carsGrid.innerHTML = list.map((car, idx) => {
@@ -272,12 +272,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Open Car Detail Modal
   window.openCarDetail = function(carId) {
     const car = cars.find(c => c.id === carId);
-    if (!car || !modal || !modalContent) return;
+    if (!car) return;
+
+    const modalEl = modal || document.getElementById('car-modal');
+    const modalContentEl = modalContent || document.getElementById('modal-body-content');
+    if (!modalEl || !modalContentEl) return;
 
     currentGalleryIndex = 0;
     const images = car.images && car.images.length ? car.images : ['assets/logo.svg'];
 
-    modalContent.innerHTML = `
+    modalContentEl.innerHTML = `
       <div class="flex flex-col lg:grid lg:grid-cols-12 gap-6">
         <!-- Gallery Column (7 cols) -->
         <div class="lg:col-span-7 flex flex-col gap-3">
@@ -505,14 +509,15 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCalc();
 
     // Show modal
-    modal.classList.remove('hidden');
+    modalEl.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
   };
 
   // Close Modal
   function closeModal() {
-    if (!modal) return;
-    modal.classList.add('hidden');
+    const modalEl = modal || document.getElementById('car-modal');
+    if (!modalEl) return;
+    modalEl.classList.add('hidden');
     document.body.style.overflow = '';
   }
 

@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Manrope:wght@400;500;600;700&amp;family=Sora:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary": "#b9c8de", "on-tertiary": "#690005", "surface-variant": "#31353e", "secondary-fixed": "#d4e4fa", "surface-container-lowest": "#0a0e16", "surface": "#0f131c", "error": "#ffb4ab", "secondary-container": "#39485a", "on-primary-fixed": "#40000c", "on-background": "#dfe2ee", "on-secondary": "#233143", "surface-container-high": "#262a33", "inverse-primary": "#be0037", "primary-fixed": "#ffdada", "inverse-on-surface": "#2c3039", "surface-dim": "#0f131c", "on-secondary-fixed-variant": "#39485a", "on-surface": "#dfe2ee", "surface-container": "#1c2028", "tertiary-fixed-dim": "#ffb4ab", "inverse-surface": "#dfe2ee", "primary-container": "#e11d48", "surface-bright": "#353942", "primary": "#ffb3b6", "on-primary-fixed-variant": "#920028", "on-tertiary-fixed": "#410002", "surface-container-highest": "#31353e", "surface-tint": "#ffb3b6", "tertiary-fixed": "#ffdad6", "on-secondary-container": "#a7b6cc", "outline-variant": "#5c3f40", "surface-container-low": "#181c24", "on-tertiary-container": "#fffaf9", "on-primary-container": "#fffaf9", "on-primary": "#68001a", "background": "#0f131c", "primary-fixed-dim": "#ffb3b6", "on-tertiary-fixed-variant": "#93000b", "on-surface-variant": "#e5bdbe", "error-container": "#93000a", "on-error": "#690005", "on-secondary-fixed": "#0d1c2d", "tertiary": "#ffb4ab", "secondary-fixed-dim": "#b9c8de", "on-error-container": "#ffdad6", "outline": "#ac8889", "tertiary-container": "#df2828" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-4xl": "6rem", "container-max-width": "1280px", "space-sm": "0.75rem", "grid-gutter-mobile": "1rem", "space-xs": "0.5rem", "grid-margin-mobile": "1rem", "space-md": "1rem", "grid-gutter-desktop": "1.5rem", "space-2xl": "3rem", "space-3xl": "4rem", "space-2xs": "0.25rem", "space-xl": "2rem", "grid-margin-desktop": "3rem", "space-lg": "1.5rem" }, "fontFamily": { "label-spec": [ "JetBrains Mono" ], "price-tag": [ "Sora" ], "headline-md": [ "Sora" ], "body-sm": [ "Manrope" ], "label-badge": [ "Sora" ], "display-hero-mobile": [ "Sora" ], "headline-xl-mobile": [ "Sora" ], "headline-xl": [ "Sora" ], "headline-lg": [ "Sora" ], "headline-sm": [ "Sora" ], "body-lg": [ "Manrope" ], "body-md": [ "Manrope" ], "display-hero": [ "Sora" ] }, "fontSize": { "label-spec": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" } ], "price-tag": [ "24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-md": [ "22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "label-badge": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.45)]"><div class="max-w-container-max-width mx-auto px-grid-margin-mobile lg:px-grid-margin-desktop h-20 flex items-center justify-between gap-space-md"><a class="flex items-center gap-space-sm group text-left" data-path="home" href="#"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase group-hover:text-primary transition-colors">Autos Aragón</span><span class="px-space-2xs py-0.5 rounded-lg bg-primary-container/20 text-primary text-[10px] font-label-badge uppercase tracking-wider">BCN</span></div><span class="font-label-spec text-label-spec text-secondary tracking-widest uppercase opacity-80">Prestige Automotive • Est. 1994</span></div></a><nav class="hidden xl:flex items-center gap-space-xs p-space-2xs bg-surface-container-low/70 rounded-full" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_16px_rgba(225,29,72,0.35)]"><a aria-current="page" class="px-space-md py-space-xs transition-colors uppercase tracking-wider bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_16px_rgba(225,29,72,0.35)]" data-path="home" href="#">Home</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm uppercase tracking-wider flex items-center gap-space-xs" data-path="stock" href="#">Stock<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-badge text-label-badge">48</span></a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm uppercase tracking-wider" data-path="compramos-tu-coche" href="#">Compramos tu Coche</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm uppercase tracking-wider" data-path="quienes-somos" href="#">Quiénes Somos</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm uppercase tracking-wider" data-path="contacto" href="#">Contacto</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex flex-col items-end text-right"><span class="font-label-spec text-label-spec text-secondary uppercase">Showroom Directo</span><a class="font-headline-sm text-headline-sm text-on-surface hover:text-primary transition-colors tracking-tight" href="tel:932328715">93.232.87.15</a></div><a class="hidden sm:inline-flex items-center justify-center px-space-lg py-space-xs rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm tracking-wide uppercase shadow-[0_0_20px_rgba(225,29,72,0.35)] hover:bg-tertiary-container hover:text-on-tertiary-container transition-all" data-path="stock" href="#">Ver Stock</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- HERO SECTION WITH INTEGRATED SEARCH -->
+<section class="relative w-full -mt-20 pt-24 pb-space-3xl overflow-hidden bg-surface-container-lowest">
+<!-- Atmospheric Ambient Glows -->
+<div class="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-primary-container/15 blur-[120px] pointer-events-none"></div>
+<div class="absolute bottom-10 left-10 w-[500px] h-[500px] rounded-full bg-secondary-container/20 blur-[140px] pointer-events-none"></div>
+<div class="max-w-container-max-width mx-auto px-grid-margin-mobile lg:px-grid-margin-desktop relative z-10">
+<!-- Top Micro Pill: Location & Assurance -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-2xs rounded-full bg-surface-container-high/80 backdrop-blur-md shadow-md mb-space-lg">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-spec text-label-spec text-primary uppercase">C/ Aragó, 507 • Barcelona • Concesionario Oficial Multimarca</span>
+</div>
+<!-- Grid Split: Headline & Visual Anchor -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center mb-space-2xl">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge tracking-widest text-secondary uppercase">Excelencia Automotriz Desde 1994</span>
+<div class="h-px w-16 bg-surface-variant"></div>
+</div>
+<h1 class="font-display-hero text-headline-xl lg:text-display-hero text-on-surface uppercase tracking-tight leading-none">
+            Vehículos de ocasión <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-container to-tertiary">seleccionados</span> con garantía en Barcelona
+          </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">
+            Inspección rigurosa en 150 puntos mecánicos, entrega inmediata con garantía certificada y la confianza de más de 30 años en el distrito del Eixample/Clot.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center gap-space-xs px-space-xl py-space-sm rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm uppercase tracking-wide shadow-xl hover:bg-tertiary-container transition-all" href="#stock-directo">
+<span>Explorar Stock (48)</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-surface-container text-on-surface font-headline-sm text-headline-sm uppercase tracking-wide hover:bg-surface-container-high transition-all" href="#tasacion-rapida">
+<span class="material-symbols-outlined text-primary text-[20px]">currency_exchange</span>
+<span>Tasar mi coche</span>
+</a>
+</div>
+</div>
+<!-- Hero Hero Vehicle Visual (Mazda Soul Red Tribute) -->
+<div class="lg:col-span-5 relative">
+<div class="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-surface-container-low group">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent z-10 opacity-70"></div>
+<img class="w-full h-[360px] lg:h-[420px] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Photorealistic showroom shot of a pristine deep metallic soul red crossover SUV Mazda CX-30 parked in a high-tech modern architectural space in Barcelona, dramatic studio rim lighting reflecting across dynamic gloss body curves, high depth of field, ultra-clean automotive photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWxnama6RkKbBxIv38arwCtkDdszLgmOci-v43BbnXsxJi8WaLwHY1XjHkZ1FvWl_dGLM73kmWVkOc3Q8HM3a7jTtFbr8Gn_9B8GAsGGBMrAEhfwfY--mzWg6IGDMqX3xsE-gSq-48WY0MBZDyxpKVafXZam0XuKyiofcIKucJcKye4manmUXxVE4AYnRCJcZpZJekLVs2AFqC3EvRcdLU4hD54sm-ZpYN_Ao1HL6l5m7CgFyoAch9"/>
+<div class="absolute top-space-md left-space-md z-20 flex flex-col gap-space-2xs">
+<span class="px-space-sm py-1 rounded-full bg-primary-container text-on-primary-container font-label-badge text-label-badge uppercase shadow-lg">Novedad Destacada</span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-highest/90 backdrop-blur-md text-on-surface font-label-spec text-label-spec">Mazda CX-30 Skyactiv-G 150cv</span>
+</div>
+<div class="absolute bottom-space-md left-space-md right-space-md z-20 flex items-center justify-between p-space-sm rounded-xl bg-surface-container-high/90 backdrop-blur-md">
+<div>
+<span class="block font-label-spec text-label-spec text-secondary uppercase">Entrega Inmediata</span>
+<span class="font-price-tag text-price-tag text-on-surface">22.890 €</span>
+</div>
+<div class="text-right">
+<span class="block font-label-spec text-label-spec text-primary uppercase">Cuota a Medida</span>
+<span class="font-headline-sm text-headline-sm text-secondary">239 €/mes</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Fast Search & Inventory Filter Cockpit -->
+<div class="w-full p-space-md lg:p-space-lg rounded-2xl bg-surface-container/90 backdrop-blur-xl shadow-2xl">
+<form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md items-end" id="hero-filter-form">
+<!-- Filter 1: Marca y Modelo -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-spec text-label-spec uppercase text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">directions_car</span>
+              Marca • Modelo
+            </label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md py-space-xs px-space-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option value="all">Todas las Marcas</option>
+<option value="mazda">Mazda (12)</option>
+<option value="audi">Audi (8)</option>
+<option value="mercedes">Mercedes-Benz (9)</option>
+<option value="bmw">BMW (7)</option>
+<option value="volkswagen">Volkswagen (10)</option>
+<option value="seat">SEAT / Cupra (6)</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-xs top-2.5 text-secondary pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Filter 2: Carrocería -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-spec text-label-spec uppercase text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">category</span>
+              Tipo de Carrocería
+            </label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md py-space-xs px-space-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option value="all">Cualquier Silueta</option>
+<option value="suv">SUV &amp; Crossover</option>
+<option value="compacto">Compacto Urbano</option>
+<option value="berlina">Berlina Ejecutiva</option>
+<option value="familiar">Familiar / Estate</option>
+<option value="deportivo">Coupe &amp; Sport</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-xs top-2.5 text-secondary pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Filter 3: Combustible / Etiqueta -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-spec text-label-spec uppercase text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">local_gas_station</span>
+              Motor / Etiqueta DGT
+            </label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md py-space-xs px-space-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option value="all">Todos los Motores</option>
+<option value="eco">Híbrido (ECO / 0)</option>
+<option value="gasolina">Gasolina</option>
+<option value="diesel">Diésel Euro 6</option>
+<option value="electrico">100% Eléctrico</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-xs top-2.5 text-secondary pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Filter 4: Presupuesto Máximo -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-spec text-label-spec uppercase text-secondary flex items-center justify-between">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">euro</span>
+                Presupuesto Máx.
+              </span>
+<span class="text-on-surface font-label-badge text-label-badge" id="price-display">35.000 €</span>
+</label>
+<input class="w-full accent-primary-container h-2 bg-surface-container-lowest rounded-lg cursor-pointer" max="50000" min="8000" oninput="document.getElementById('price-display').innerText = Number(this.value).toLocaleString('es-ES') + ' €'" step="1000" type="range" value="35000"/>
+</div>
+<!-- Filter Action CTA -->
+<div class="flex">
+<button class="w-full inline-flex items-center justify-center gap-space-xs py-space-xs px-space-md rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm uppercase tracking-wider shadow-lg hover:bg-tertiary-container transition-all" onclick="document.getElementById('stock-directo').scrollIntoView({behavior: 'smooth'})" type="button">
+<span class="material-symbols-outlined text-[20px]">search</span>
+<span>Filtrar</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Trust Metrics Pill Bar -->
+<div class="mt-space-xl grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">+30 Años</span>
+<span class="font-body-sm text-body-sm text-secondary">Trayectoria en Aragó 507</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">security</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">1 Año Garantía</span>
+<span class="font-body-sm text-body-sm text-secondary">Total europea certificada</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">checklist_rtl</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">150 Puntos</span>
+<span class="font-body-sm text-body-sm text-secondary">Revisión y kilometraje real</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">100% Flexible</span>
+<span class="font-body-sm text-body-sm text-secondary">Financiación rápida en 24h</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURED STOCK / INVENTORY SECTION -->
+<section class="w-full py-space-3xl bg-surface" id="stock-directo">
+<div class="max-w-container-max-width mx-auto px-grid-margin-mobile lg:px-grid-margin-desktop">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-2xl">
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="font-label-badge text-label-badge text-primary uppercase tracking-wider">Showroom Carrer d'Aragó 507</span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface uppercase tracking-tight">Vehículos Destacados en Stock</h2>
+</div>
+<!-- Filter Chips Carousel -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-2xs">
+<button class="px-space-md py-space-2xs rounded-lg bg-primary-container text-on-primary-container font-label-badge text-label-badge uppercase shadow-sm">
+            Todos (48)
+          </button>
+<button class="px-space-md py-space-2xs rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge uppercase transition-colors">
+            SUV &amp; Crossover
+          </button>
+<button class="px-space-md py-space-2xs rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge uppercase transition-colors">
+            Híbridos / ECO
+          </button>
+<button class="px-space-md py-space-2xs rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge uppercase transition-colors">
+            Compactos
+          </button>
+<button class="px-space-md py-space-2xs rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge uppercase transition-colors">
+            Premium Sport
+          </button>
+</div>
+</div>
+<!-- Vehicle Grid: 6 Curated Top Vehicles -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Car 1: Mazda CX-30 Soul Red (Homage to original site visual) -->
+<div class="flex flex-col rounded-2xl bg-surface-container-low overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
+<div class="relative w-full h-56 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern Soul Crystal Red metallic Mazda CX-30 SUV car exterior in front angle, crisp sunlight highlighting the glossy curves and silver multi-spoke wheels, premium automotive showroom presentation in Barcelona" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaG_iPXXvigS1uLrXViDPr30YxfXkdaWZHd_mOkzANCnKsJhDgkBQwEkD0HEOIvRIcns09V_BsJ3yPQnCmt_o3bMHOdj_hEOkR7FVULGfxbM5lPQBSeLZLmBB04TMSyycbSoMb3IQmKKg_Q0DvOxQuYRg9ACyN0Z3E_cXDjzucSY0o-y4UW_6sUO4NhHKTqCo8sdd2vNGm4GyznUD0IyQNDk75Y6rA4fS-BdY5r4QoshPN2kxWLpDG"/>
+<div class="absolute top-3 left-3 flex gap-1.5 z-10">
+<span class="px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 font-label-badge text-label-badge backdrop-blur-md uppercase">ECO DGT</span>
+<span class="px-2 py-0.5 rounded-md bg-primary-container/80 text-on-primary-container font-label-badge text-label-badge backdrop-blur-md uppercase">Garantía 12M</span>
+</div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-spec text-label-spec">
+              Matrícula LFW
+            </div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+<div>
+<div class="flex items-center justify-between text-secondary font-label-spec text-label-spec uppercase mb-1">
+<span>Mazda</span>
+<span>Barcelona Stock</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">CX-30 2.0 e-Skyactiv-G Zenith</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">150 CV • Tapicería de cuero • Cámara 360° • Head-up Display</p>
+</div>
+<!-- Telemetry Matrix -->
+<div class="grid grid-cols-3 gap-space-xs p-space-xs rounded-xl bg-surface-container">
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">speed</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">42.100 km</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">2021</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">settings</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">Manual 6v</span>
+</div>
+</div>
+<!-- Price and Action Strip -->
+<div class="pt-space-xs flex flex-col gap-space-sm">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-price-tag text-price-tag text-on-surface">21.900 €</span>
+<span class="block font-body-sm text-body-sm text-secondary">Al contado</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary">235 €/mes</span>
+<span class="block font-label-spec text-label-spec text-secondary">Sin entrada inicial</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-2xs">
+<button class="py-space-xs px-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-badge text-label-badge uppercase transition-colors text-center">
+                  Ficha Técnica
+                </button>
+<a class="py-space-xs px-space-sm rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary-container font-label-badge text-label-badge uppercase transition-colors text-center" href="tel:932328715">
+                  Reservar Cita
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Car 2: Audi Q3 S-line -->
+<div class="flex flex-col rounded-2xl bg-surface-container-low overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
+<div class="relative w-full h-56 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Sleek dark metallic gray Audi Q3 S-line crossover vehicle parked inside an industrial minimalist showroom, LED matrix headlights illuminated, sharp side angles, ultra crisp automotive catalog lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxkkNf1Ryrxge4QDs5lwetsMZl4IKhoiq603mxT58agJOqlWziZKLHZHHbpYEQRVVG5GDWIbAMNDFSek4QSl-FWKMz3rzIFJNQV6ZXoa8gAu3iFdJ8IvL48BtHR5YES9F5fgsriQC26oRdci29_sJABYgwVV9RKb4OsiX7PYLe_DPCASuB19RzzmgoL_6c4rsPlpwCbCEFyJh7O3GuT8NrLSBidQJDfQuyCe0dZrWAkJDqPOZypvS3"/>
+<div class="absolute top-3 left-3 flex gap-1.5 z-10">
+<span class="px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 font-label-badge text-label-badge backdrop-blur-md uppercase">Etiqueta C</span>
+<span class="px-2 py-0.5 rounded-md bg-primary-container/80 text-on-primary-container font-label-badge text-label-badge backdrop-blur-md uppercase">Garantía 12M</span>
+</div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-spec text-label-spec">
+              Matrícula MKP
+            </div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+<div>
+<div class="flex items-center justify-between text-secondary font-label-spec text-label-spec uppercase mb-1">
+<span>Audi</span>
+<span>Barcelona Stock</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Q3 35 TFSI S tronic S-line</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">150 CV • Virtual Cockpit Plus • Paquete deportivo S line • Sensor parking</p>
+</div>
+<!-- Telemetry Matrix -->
+<div class="grid grid-cols-3 gap-space-xs p-space-xs rounded-xl bg-surface-container">
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">speed</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">38.400 km</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">2022</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">settings</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">Auto 7v</span>
+</div>
+</div>
+<!-- Price and Action Strip -->
+<div class="pt-space-xs flex flex-col gap-space-sm">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-price-tag text-price-tag text-on-surface">29.800 €</span>
+<span class="block font-body-sm text-body-sm text-secondary">Al contado</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary">315 €/mes</span>
+<span class="block font-label-spec text-label-spec text-secondary">Financiación 100%</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-2xs">
+<button class="py-space-xs px-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-badge text-label-badge uppercase transition-colors text-center">
+                  Ficha Técnica
+                </button>
+<a class="py-space-xs px-space-sm rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary-container font-label-badge text-label-badge uppercase transition-colors text-center" href="tel:932328715">
+                  Reservar Cita
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Car 3: Mercedes-Benz Clase A AMG Line -->
+<div class="flex flex-col rounded-2xl bg-surface-container-low overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
+<div class="relative w-full h-56 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Mercedes-Benz A-Class AMG line compact hatchback in polar white, diamond front grille with chrome pins, sleek aerodynamic profile, studio lighting with dark gradient backdrop, high detail luxury finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEguntIN40cTyKDdqfSWq24o_lxiBrjwOGneCyVfecYrhe6TLCl3WeuaLjDwgA-BQc_b7lzioQKjjRkEpJLXpmubblJkPGedCgk6pIiFLItrxLHd0duruwqI1Yoda22nWQopkCOCFhrX_KIR0H9zHpVEYOkgasXVo_iCC6zVlMWRZayASXqOnjLiZa48iZs52HebZwfR8zWrn9q0EmDZjjUhEZhwnLb3ECugrAPwhQjEM8W4e4zPZ8"/>
+<div class="absolute top-3 left-3 flex gap-1.5 z-10">
+<span class="px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 font-label-badge text-label-badge backdrop-blur-md uppercase">Etiqueta C</span>
+<span class="px-2 py-0.5 rounded-md bg-primary-container/80 text-on-primary-container font-label-badge text-label-badge backdrop-blur-md uppercase">Certificado DGT</span>
+</div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-spec text-label-spec">
+              Matrícula LZN
+            </div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+<div>
+<div class="flex items-center justify-between text-secondary font-label-spec text-label-spec uppercase mb-1">
+<span>Mercedes-Benz</span>
+<span>Barcelona Stock</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Clase A 200 7G-DCT AMG Line</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">163 CV • MBUX doble pantalla panorámica • Techo solar panorámico • Llantas 18"</p>
+</div>
+<!-- Telemetry Matrix -->
+<div class="grid grid-cols-3 gap-space-xs p-space-xs rounded-xl bg-surface-container">
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">speed</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">49.000 km</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">2021</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">settings</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">Automático</span>
+</div>
+</div>
+<!-- Price and Action Strip -->
+<div class="pt-space-xs flex flex-col gap-space-sm">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-price-tag text-price-tag text-on-surface">25.400 €</span>
+<span class="block font-body-sm text-body-sm text-secondary">Al contado</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary">269 €/mes</span>
+<span class="block font-label-spec text-label-spec text-secondary">Cuota sugerida</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-2xs">
+<button class="py-space-xs px-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-badge text-label-badge uppercase transition-colors text-center">
+                  Ficha Técnica
+                </button>
+<a class="py-space-xs px-space-sm rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary-container font-label-badge text-label-badge uppercase transition-colors text-center" href="tel:932328715">
+                  Reservar Cita
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Car 4: Volkswagen Golf 1.5 eTSI R-Line -->
+<div class="flex flex-col rounded-2xl bg-surface-container-low overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
+<div class="relative w-full h-56 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Refined deep navy blue metallic Volkswagen Golf 8 R-Line hatchback standing parked inside an urban architectural car dealership in Barcelona, sharp daytime highlights on gloss paint and alloy rims" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_XWjrs1ELBr_E-tLkRB0-FPd-C9j7bk1hEWq08eFRoRE4mJUDvTavyiAdL26d30qSricZYVVzteqlqNFhoFt_CIdWbtGGyNGeyb6u4rreXjUUMV2m8wYukvTy3YL9hvy5DC1FX6rIk-nt0ea_3X_64opBbiES2p9PVcMmXR53gxnowrLXFz2leT9gy4y3zN4qeE8P_z6IW7FqSDTT-zQGpvRYT6s4FzLnzRrAz9uv8-4_YRRCl4vS"/>
+<div class="absolute top-3 left-3 flex gap-1.5 z-10">
+<span class="px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 font-label-badge text-label-badge backdrop-blur-md uppercase">ECO DGT</span>
+<span class="px-2 py-0.5 rounded-md bg-primary-container/80 text-on-primary-container font-label-badge text-label-badge backdrop-blur-md uppercase">Garantía 12M</span>
+</div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-spec text-label-spec">
+              Matrícula MBN
+            </div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+<div>
+<div class="flex items-center justify-between text-secondary font-label-spec text-label-spec uppercase mb-1">
+<span>Volkswagen</span>
+<span>Barcelona Stock</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Golf 1.5 eTSI 150cv DSG R-Line</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Híbrido Ligero MHEV • Faros IQ.LIGHT LED Matrix • Asientos deportivos R</p>
+</div>
+<!-- Telemetry Matrix -->
+<div class="grid grid-cols-3 gap-space-xs p-space-xs rounded-xl bg-surface-container">
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">speed</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">31.200 km</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">2022</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">settings</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">DSG 7v</span>
+</div>
+</div>
+<!-- Price and Action Strip -->
+<div class="pt-space-xs flex flex-col gap-space-sm">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-price-tag text-price-tag text-on-surface">24.750 €</span>
+<span class="block font-body-sm text-body-sm text-secondary">Al contado</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary">255 €/mes</span>
+<span class="block font-label-spec text-label-spec text-secondary">FlexiPlan</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-2xs">
+<button class="py-space-xs px-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-badge text-label-badge uppercase transition-colors text-center">
+                  Ficha Técnica
+                </button>
+<a class="py-space-xs px-space-sm rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary-container font-label-badge text-label-badge uppercase transition-colors text-center" href="tel:932328715">
+                  Reservar Cita
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Car 5: BMW Serie 3 Touring M Sport -->
+<div class="flex flex-col rounded-2xl bg-surface-container-low overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
+<div class="relative w-full h-56 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Black sapphire metallic BMW 3 Series Touring estate car with M Sport aerodynamic package, black kidney grille, aggressive front bumper, parked under soft spotlights in a premium auto showroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm_Zsyv-aRPPI77Y0VqO9AjuqQWhoZqkNdcqApW-_54h1JKg-H14mtN-tD_RDbetqlQPjAv0c25VO-4zjVjZuMudzT6jS72EafWbaauHY7LzmWdpo0pEle83h_OcrXrqbwWgjAFyQOyYtVMv0C4415uyMQrynBYgVndBcjOlPFF8KHsmTiJkdtlyu6aNqZC-6LpT0AUE7iv3HtZ7iCEB9zD3wA48HF1ERoLoL7gOVhslkekle9iwQL"/>
+<div class="absolute top-3 left-3 flex gap-1.5 z-10">
+<span class="px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 font-label-badge text-label-badge backdrop-blur-md uppercase">Etiqueta C</span>
+<span class="px-2 py-0.5 rounded-md bg-primary-container/80 text-on-primary-container font-label-badge text-label-badge backdrop-blur-md uppercase">Garantía 12M</span>
+</div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-spec text-label-spec">
+              Matrícula LPR
+            </div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+<div>
+<div class="flex items-center justify-between text-secondary font-label-spec text-label-spec uppercase mb-1">
+<span>BMW</span>
+<span>Barcelona Stock</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">320d Touring M Sport Auto</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">190 CV Diésel • Frenos deportivos M • Navegación Professional Live Cockpit</p>
+</div>
+<!-- Telemetry Matrix -->
+<div class="grid grid-cols-3 gap-space-xs p-space-xs rounded-xl bg-surface-container">
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">speed</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">58.000 km</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">2021</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">settings</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">Steptronic</span>
+</div>
+</div>
+<!-- Price and Action Strip -->
+<div class="pt-space-xs flex flex-col gap-space-sm">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-price-tag text-price-tag text-on-surface">28.900 €</span>
+<span class="block font-body-sm text-body-sm text-secondary">Al contado</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary">305 €/mes</span>
+<span class="block font-label-spec text-label-spec text-secondary">Respuesta 24h</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-2xs">
+<button class="py-space-xs px-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-badge text-label-badge uppercase transition-colors text-center">
+                  Ficha Técnica
+                </button>
+<a class="py-space-xs px-space-sm rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary-container font-label-badge text-label-badge uppercase transition-colors text-center" href="tel:932328715">
+                  Reservar Cita
+                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Car 6: Cupra Formentor VZ -->
+<div class="flex flex-col rounded-2xl bg-surface-container-low overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group">
+<div class="relative w-full h-56 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Matte petrol blue Cupra Formentor crossover car, distinctive copper accents, dual quad exhaust tips visible from rear three-quarter angle, dynamic mood lighting on dark asphalt background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbNmuhA30ACJEIzqlZKCgnma9MG60PKtErI7pGgLE7Da30yKEdP5hTu_NC99d7fbyMUsJIo-fTH4GpqGf6Zkq1IfXlb79ObTZQH8O3lSdurg5gPjvIf7oVK4tr_2EyT0DgEq51S1cRWliEZsUaAqmZw80K92J7Hw7aiCmT1fJqh53saG6uAFO_Hk5KYMKb3NNtKPfvjSe9s0feskhG1RWH_N3Tn2hxyaNVkKsomOHycsfCoybCyxlP"/>
+<div class="absolute top-3 left-3 flex gap-1.5 z-10">
+<span class="px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 font-label-badge text-label-badge backdrop-blur-md uppercase">ECO DGT</span>
+<span class="px-2 py-0.5 rounded-md bg-primary-container/80 text-on-primary-container font-label-badge text-label-badge backdrop-blur-md uppercase">1 Propietario</span>
+</div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-spec text-label-spec">
+              Matrícula MGG
+            </div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+<div>
+<div class="flex items-center justify-between text-secondary font-label-spec text-label-spec uppercase mb-1">
+<span>Cupra</span>
+<span>Barcelona Stock</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Formentor 1.4 e-HYBRID DSG</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">204 CV Híbrido Enchufable • Autonomía eléctrica 55km • Asientos bucket</p>
+</div>
+<!-- Telemetry Matrix -->
+<div class="grid grid-cols-3 gap-space-xs p-space-xs rounded-xl bg-surface-container">
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">speed</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">34.600 km</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">2022</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">settings</span>
+<span class="font-label-spec text-label-spec text-on-surface mt-0.5">DSG 6v</span>
+</div>
+</div>
+<!-- Price and Action Strip -->
+<div class="pt-space-xs flex flex-col gap-space-sm">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-price-tag text-price-tag text-on-surface">27.600 €</span>
+<span class="block font-body-sm text-body-sm text-secondary">Al contado</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary">289 €/mes</span>
+<span class="block font-label-spec text-label-spec text-secondary">Etiqueta CERO</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-2xs">
+<button class="py-space-xs px-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-badge text-label-badge uppercase transition-colors text-center">
+                  Ficha Técnica
+                </button>
+<a class="py-space-xs px-space-sm rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary-container font-label-badge text-label-badge uppercase transition-colors text-center" href="tel:932328715">
+                  Reservar Cita
+                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- View Complete Inventory Callout -->
+<div class="mt-space-2xl text-center">
+<a class="inline-flex items-center gap-space-sm px-space-2xl py-space-md rounded-xl bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary-container font-headline-sm text-headline-sm uppercase tracking-wider transition-all shadow-lg" href="#">
+<span>Ver catálogo completo de 48 coches</span>
+<span class="material-symbols-outlined">north_east</span>
+</a>
+</div>
+</div>
+</section>
+<!-- INSTANT CAR BUYING / VALUATION SECTION ('COMPRAMOS TU COCHE') -->
+<section class="w-full py-space-3xl bg-surface-container-lowest relative overflow-hidden" id="tasacion-rapida">
+<!-- Atmospheric Red Glow Background -->
+<div class="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-primary-container/10 blur-[100px] pointer-events-none"></div>
+<div class="max-w-container-max-width mx-auto px-grid-margin-mobile lg:px-grid-margin-desktop relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<!-- Left: Process and Assurance -->
+<div class="lg:col-span-6 flex flex-col gap-space-lg">
+<div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-md bg-primary-container/20 text-primary font-label-badge text-label-badge uppercase mb-space-xs">
+              Tasación Inmediata Autos Aragón
+            </div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface uppercase tracking-tight">
+              ¿Quieres vender tu coche? <br/>
+<span class="text-primary">Te lo compramos al contado</span> hoy mismo
+            </h2>
+<p class="font-body-lg text-body-lg text-secondary mt-space-xs">
+              Valoramos tu automóvil con máxima cotización real de mercado. Sin trámites engorrosos ni intermediarios. Pago directo en C/ Aragó 507.
+            </p>
+</div>
+<!-- 3-Step Infographic Sequence -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm shrink-0">
+                1
+              </div>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Datos de tu vehículo</h4>
+<p class="font-body-sm text-body-sm text-secondary">Introduce la matrícula, año y kilometraje en nuestro formulario rápido.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center font-headline-sm text-headline-sm shrink-0">
+                2
+              </div>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Oferta firme en 30 minutos</h4>
+<p class="font-body-sm text-body-sm text-secondary">Nuestros peritos técnicos calculan el valor máximo transparente sin compromiso.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center font-headline-sm text-headline-sm shrink-0">
+                3
+              </div>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Pago seguro e inmediato</h4>
+<p class="font-body-sm text-body-sm text-secondary">Transferencia bancaria instantánea y gestión de cambio de nombre en Tráfico (DGT) gratuita.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Appraisal Calculator Card -->
+<div class="lg:col-span-6">
+<div class="p-space-xl rounded-2xl bg-surface-container/90 backdrop-blur-xl shadow-2xl flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Tasar Coche Gratis</h3>
+<span class="font-label-spec text-label-spec text-secondary">Sin costes ocultos • Respuesta por WhatsApp</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">drive_eta</span>
+</div>
+</div>
+<form class="flex flex-col gap-space-md" id="valuation-form" onsubmit="event.preventDefault(); alert('¡Gracias! Nuestro tasador de Autos Aragón en C/ Aragó 507 contactará contigo con la valoración en menos de 30 minutos.');">
+<!-- Matrícula Input with Authentic Spanish Plate Styling -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-spec text-label-spec uppercase text-secondary">Matrícula del Vehículo</label>
+<div class="flex items-stretch rounded-lg overflow-hidden bg-surface-container-lowest">
+<div class="bg-blue-800 text-white px-3 flex flex-col items-center justify-center">
+<span class="text-[10px] font-bold leading-none">E</span>
+<span class="text-[8px]">•••</span>
+</div>
+<input class="w-full bg-surface-container-lowest text-on-surface font-label-spec text-headline-sm uppercase px-space-md py-space-sm focus:outline-none focus:ring-2 focus:ring-primary tracking-widest" placeholder="1234 ABC" required="" type="text"/>
+</div>
+</div>
+<!-- Two Column: Kilómetros + Año -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-spec text-label-spec uppercase text-secondary">Kilómetros Aprox.</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md py-space-xs px-space-md rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Ej. 65000" required="" type="number"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-spec text-label-spec uppercase text-secondary">Año Matriculación</label>
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-md py-space-xs px-space-md rounded-lg focus:outline-none focus:ring-2 focus:ring-primary appearance-none">
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="anterior">2016 o anterior</option>
+</select>
+</div>
+</div>
+<!-- Two Column: Teléfono + Estado -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-spec text-label-spec uppercase text-secondary">Teléfono / WhatsApp</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md py-space-xs px-space-md rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="600 000 000" required="" type="tel"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-spec text-label-spec uppercase text-secondary">Estado General</label>
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-md py-space-xs px-space-md rounded-lg focus:outline-none focus:ring-2 focus:ring-primary appearance-none">
+<option value="impecable">Excelente / Sin daños</option>
+<option value="bueno">Buen estado (desgaste normal)</option>
+<option value="chapa">Pequeños roces chapa</option>
+<option value="averia">Avería mecánica</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-space-2xs">
+<input class="w-4 h-4 rounded bg-surface-container-lowest accent-primary-container" id="legal" required="" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-secondary" for="legal">
+                  Acepto la política de privacidad y el cálculo de oferta comercial.
+                </label>
+</div>
+<button class="w-full py-space-sm px-space-md rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary-container font-headline-sm text-headline-sm uppercase tracking-wider transition-all shadow-xl mt-space-xs" type="submit">
+                Obtener Tasación Inmediata
+              </button>
+<div class="flex items-center justify-center gap-space-xs text-secondary font-label-spec text-label-spec pt-space-2xs">
+<span class="material-symbols-outlined text-[16px] text-emerald-400">lock</span>
+<span>Tus datos están 100% protegidos. Sin spam.</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WHY AUTOS ARAGÓN BARCELONA (VALUE PILLARS) -->
+<section class="w-full py-space-3xl bg-surface">
+<div class="max-w-container-max-width mx-auto px-grid-margin-mobile lg:px-grid-margin-desktop">
+<div class="max-w-2xl mb-space-2xl">
+<span class="font-label-badge text-label-badge text-primary uppercase tracking-widest">¿Por Qué Elegirnos?</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface uppercase tracking-tight mt-space-2xs">
+          Más de 3 décadas de confianza y rigor en Barcelona
+        </h2>
+<p class="font-body-md text-body-md text-secondary mt-space-xs">
+          Comprar o vender un vehículo debe ser un proceso transparente, ágil y con absolutas garantías técnicas. En Autos Aragón trabajamos cada día para superar tus expectativas.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Pillar 1 -->
+<div class="flex flex-col gap-space-sm p-space-xl rounded-2xl bg-surface-container-low shadow-md hover:bg-surface-container transition-colors">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">location_on</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">Showroom en el Centro</h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+            Situados en Carrer d'Aragó 507, una de las arterias principales de Barcelona, con fácil acceso en transporte público (Metro Encants y Clot) e instalaciones para probar tu vehículo.
+          </p>
+</div>
+<!-- Pillar 2 -->
+<div class="flex flex-col gap-space-sm p-space-xl rounded-2xl bg-surface-container-low shadow-md hover:bg-surface-container transition-colors">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">verified_user</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">Certificación 150 Puntos</h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+            Cada coche atraviesa un peritaje exhaustivo de motor, transmisión, sistemas de seguridad, diagnosis electrónica y verificación de kilometraje auténtico en base de datos DGT.
+          </p>
+</div>
+<!-- Pillar 3 -->
+<div class="flex flex-col gap-space-sm p-space-xl rounded-2xl bg-surface-container-low shadow-md hover:bg-surface-container transition-colors">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">handshake</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">Máxima Transparencia</h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+            Precios sin sorpresas ni letra pequeña. Historial de mantenimiento verificable, contratos claros y opción de financiamiento hasta el 100% sin entrada.
+          </p>
+</div>
+<!-- Pillar 4 -->
+<div class="flex flex-col gap-space-sm p-space-xl rounded-2xl bg-surface-container-low shadow-md hover:bg-surface-container transition-colors">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">support_agent</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">Atención Directa 93.232.87.15</h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+            Sin contestadores automáticos interminables. Habla directamente con profesionales con décadas de oficio en el sector automotriz catalán.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- DIRECT CONTACT, HOURS & INTERACTIVE BARCELONA SHOWROOM MAP -->
+<section class="w-full py-space-3xl bg-surface-container-lowest" id="visitanos">
+<div class="max-w-container-max-width mx-auto px-grid-margin-mobile lg:px-grid-margin-desktop">
+<div class="p-space-xl lg:p-space-2xl rounded-3xl bg-surface-container-low shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<!-- Showroom Contact Details -->
+<div class="lg:col-span-6 flex flex-col gap-space-lg">
+<div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-md bg-surface-container-high text-primary font-label-badge text-label-badge uppercase mb-space-xs">
+                Visita Nuestras Instalaciones
+              </div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface uppercase tracking-tight">
+                Autos Aragón • Barcelona
+              </h2>
+<p class="font-body-md text-body-md text-secondary mt-space-2xs">
+                Estamos a tu disposición para asesorarte en la elección de tu próximo automóvil o para realizar una prueba de conducción sin compromiso.
+              </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Address Item -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">pin_drop</span>
+<span class="font-label-badge text-label-badge uppercase">Dirección Física</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">C/ Aragó Nº 507</span>
+<span class="font-body-sm text-body-sm text-secondary">08013 Barcelona, España</span>
+<span class="font-label-spec text-label-spec text-secondary opacity-70">Metro: Encants (L2) / Clot (L1)</span>
+</div>
+<!-- Phone Direct Item -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span class="font-label-badge text-label-badge uppercase">Teléfono Directo</span>
+</div>
+<a class="font-headline-sm text-headline-sm text-on-surface hover:text-primary transition-colors" href="tel:932328715">
+                  93.232.87.15
+                </a>
+<span class="font-body-sm text-body-sm text-secondary">Atención showroom inmediata</span>
+<a class="font-label-spec text-label-spec text-primary hover:underline truncate" href="mailto:info@autosaragon.com">
+                  info@autosaragon.com
+                </a>
+</div>
+<!-- Opening Hours Item -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-2xs sm:col-span-2">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+<span class="font-label-badge text-label-badge uppercase">Horario Comercial</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-2xs pt-1">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Lunes a Viernes</span>
+<span class="font-body-sm text-body-sm text-secondary">09:30 - 13:30 / 16:30 - 20:00 h</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Sábados</span>
+<span class="font-body-sm text-body-sm text-secondary">Cita previa concertada</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons Row -->
+<div class="flex flex-wrap items-center gap-space-md">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary-container font-headline-sm text-headline-sm uppercase tracking-wide transition-all shadow-lg" href="tel:932328715">
+<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+<span>Llamar al Concesionario</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-headline-sm text-headline-sm uppercase tracking-wide transition-all" href="https://maps.google.com/?q=Carrer+de+Arag%C3%B3+507+Barcelona" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-primary text-[20px]">directions</span>
+<span>Cómo Llegar</span>
+</a>
+</div>
+</div>
+<!-- Static Map Viewport (Triggered through pipeline) -->
+<div class="lg:col-span-6 flex flex-col">
+<div class="relative w-full h-80 lg:h-[420px] rounded-2xl overflow-hidden shadow-xl bg-surface-container-high">
+<div class="w-full h-full bg-cover bg-center rounded-2xl" data-location="Carrer de Aragó 507, 08013 Barcelona, Spain" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCW099WSeC7H70R92BN-KkcDoJMT1e2TOa64FkpFu7yIaygvk7N_RTo_TfjEHhIQKI8gbZ5IXhDa8oF-HRLNuIm5avCjXlG6dtWqtUbvgn5OgKp1DfHkkVds5Ny2r1QbW-epEHAU07ElM8Tn9QcoTRR9RB-IuD_3uBtN-BFnyJoEaZ8vOSyFOJP8JpUYDHwrBC8hTYFnMu5qxRv7SAOXM3mjTBb9nPLQzdinjGg0433TkXZvaZCzdUn')"></div>
+<!-- Floating Location Overlay Pin -->
+<div class="absolute bottom-space-md left-space-md right-space-md p-space-md rounded-xl bg-surface-container-lowest/90 backdrop-blur-md shadow-2xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">store</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm text-on-surface">Autos Aragón</span>
+<span class="block font-body-sm text-body-sm text-secondary">C/ Aragó, 507 • Distrito Sant Martí / Eixample</span>
+</div>
+</div>
+<div class="hidden sm:block">
+<span class="inline-block px-space-xs py-1 rounded bg-emerald-500/20 text-emerald-400 font-label-badge text-label-badge uppercase">Abierto Hoy</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface"><div class="w-full bg-surface-container-low/60 shadow-[0_-1px_12px_rgba(0,0,0,0.3)]"><div class="max-w-container-max-width mx-auto px-grid-margin-mobile lg:px-grid-margin-desktop py-space-md flex flex-wrap items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><span class="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-label-spec text-label-spec text-on-surface uppercase">Showroom Abierto: Lunes a Viernes 09:30 - 13:30 / 16:00 - 20:00</span></div><div class="flex items-center gap-space-lg"><span class="font-body-sm text-body-sm text-secondary">C/ Aragó Nº 507, 08013 Barcelona</span><a class="font-label-spec text-label-spec text-primary hover:text-on-primary-fixed-variant transition-colors uppercase" href="tel:932328715">Llamar Ahora</a></div></div></div><div class="max-w-container-max-width mx-auto px-grid-margin-mobile lg:px-grid-margin-desktop py-space-3xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-2xl"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-on-surface uppercase tracking-tight">Autos Aragón</span><span class="px-space-2xs py-0.5 rounded-lg bg-primary-container/20 text-primary text-[10px] font-label-badge uppercase">Barcelona</span></div><p class="font-body-sm text-body-sm text-secondary leading-relaxed">Especialistas en vehículos de ocasión de alta gama y seminuevos rigurosamente seleccionados en el corazón de Barcelona. Más de 30 años garantizando excelencia, transparencia y pasión técnica automotriz.</p><div class="flex items-center gap-space-xs pt-space-xs"><span class="px-space-xs py-1 rounded-lg bg-surface-container text-secondary font-label-badge text-label-badge uppercase">Garantía 12/24 Meses</span><span class="px-space-xs py-1 rounded-lg bg-surface-container text-secondary font-label-badge text-label-badge uppercase">Certificación DGT</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wider">Navegación</span><div class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" data-path="home" href="#">Inicio</a><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors flex items-center justify-between pr-space-lg" data-path="stock" href="#">Stock Disponible <span class="font-label-badge text-label-badge text-primary">48 uds.</span></a><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" data-path="compramos-tu-coche" href="#">Tasación Inmediata</a><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" data-path="quienes-somos" href="#">Instalaciones &amp; Trayectoria</a><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" data-path="contacto" href="#">Atención al Cliente</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wider">Showroom Central</span><div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary"><div class="flex flex-col"><span class="text-on-surface font-semibold">Dirección Física</span><span>Carrer d'Aragó, 507</span><span>08013 Barcelona, España</span></div><div class="flex flex-col pt-space-2xs"><span class="text-on-surface font-semibold">Contacto Directo</span><a class="text-on-surface hover:text-primary transition-colors" href="tel:932328715">Tel: 93.232.87.15</a><a class="text-on-surface hover:text-primary transition-colors" href="mailto:info@autosaragon.com">info@autosaragon.com</a></div><div class="flex flex-col pt-space-2xs"><span class="text-on-surface font-semibold">Metro Próximo</span><span>Encants (L2) • Clot (L1, L2, Rodalies)</span></div></div></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wider">Compromiso Aragón</span><p class="font-body-sm text-body-sm text-secondary">Financiación flexible a medida hasta el 100% de la operación con respuesta ágil en 24 horas.</p><div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><span class="font-label-spec text-label-spec text-on-surface uppercase">¿Quieres vender tu coche?</span><span class="font-body-sm text-body-sm text-secondary">Pago inmediato y gestión documental integral sin desplazamientos.</span><a class="inline-flex items-center justify-center py-space-xs px-space-md rounded-lg bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-badge text-label-badge uppercase transition-all" data-path="compramos-tu-coche" href="#">Tasación Online</a></div></div></div><div class="mt-space-2xl pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-label-spec text-label-spec text-secondary"><p>© 2025 Autos Aragón S.L. • C/ Aragó 507, Barcelona • Todos los derechos reservados.</p><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors" href="#">Aviso Legal</a><a class="hover:text-on-surface transition-colors" href="#">Política de Privacidad</a><a class="hover:text-on-surface transition-colors" href="#">Cookies</a><a class="hover:text-on-surface transition-colors" href="#">Términos de Financiación</a></div></div></div></footer></body></html>

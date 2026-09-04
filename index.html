@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="theme-color" content="#090d15">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Autos Aragón | Coches de Ocasión y Seminuevos en Barcelona</title>
+  <meta name="description" content="Autos Aragón en Carrer d'Aragó 507, Barcelona. Vehículos seminuevos revisados en 150 puntos, garantía de 12 meses nacional y cambio de nombre incluido.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff1f2',
+              500: '#f43f5e',
+              600: '#e11d48',
+              700: '#be123c',
+              800: '#9f1239',
+              900: '#881337',
+              950: '#4c0519'
+            },
+            canvas: '#090d15',
+            surface: '#0f141f',
+            card: '#151b28',
+            border: 'rgba(255, 255, 255, 0.08)'
+          },
+          fontFamily: {
+            sora: ['Sora', 'sans-serif'],
+            manrope: ['Manrope', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-canvas text-slate-200 antialiased selection:bg-rose-500 selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-rose-950 via-slate-900 to-rose-950 border-b border-rose-500/20 py-1.5 px-4 text-center">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 text-[11px] sm:text-xs font-mono text-slate-300">
+      <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span>Showroom en <strong>C/ Aragó nº 507, Barcelona</strong></span>
+      <span class="hidden sm:inline text-slate-500">•</span>
+      <span class="hidden sm:inline text-rose-400">Garantía 12 Meses y Cambio de Nombre Incluidos</span>
+    </div>
+  </div>
+
+  <!-- Smart Fixed Header -->
+  <header class="sticky top-0 z-40 glass-panel border-b border-white/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-4">
+      <!-- Logo -->
+      <a href="#inicio" class="flex items-center gap-2.5 group">
+        <img src="assets/logo.svg" alt="Autos Aragón" class="h-9 sm:h-11 w-auto transition-transform group-hover:scale-105">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-1 p-1 rounded-full bg-slate-900/80 border border-white/5 text-xs font-sora font-semibold uppercase tracking-wider">
+        <a href="#inicio" class="px-4 py-2 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition-all">Inicio</a>
+        <a href="#stock" class="px-4 py-2 rounded-full text-white bg-rose-600 shadow-md shadow-rose-600/30 transition-all">Stock (14)</a>
+        <a href="#compramos-tu-coche" class="px-4 py-2 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition-all">Compramos tu Coche</a>
+        <a href="#garantia" class="px-4 py-2 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition-all">Garantía</a>
+        <a href="#contacto" class="px-4 py-2 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition-all">Contacto</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Direct Phone -->
+        <a href="tel:932328715" class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-white font-mono text-xs font-semibold border border-white/10 transition-all">
+          <span class="material-symbols-outlined text-[18px] text-rose-400">call</span>
+          <span>93 232 87 15</span>
+        </a>
+
+        <!-- WhatsApp Quick Link -->
+        <a href="https://wa.me/34932328715?text=Hola%20Autos%20Arag%C3%B3n,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20veh%C3%ADculos%20en%20stock." target="_blank" rel="noopener" class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-600/90 hover:bg-emerald-500 text-white font-sora text-xs font-bold uppercase tracking-wider shadow-lg shadow-emerald-600/20 transition-all touch-press">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.392-10.416c-4.418 0-8 3.582-8 8 0 1.411.365 2.738 1.002 3.896l-1.064 3.89 3.987-1.046c1.118.608 2.399.96 3.757.96 4.418 0 8-3.582 8-8s-3.582-8-8-8z"/></svg>
+          <span class="hidden xs:inline">WhatsApp</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="lg:hidden w-10 h-10 rounded-xl bg-slate-900 border border-white/10 text-white flex items-center justify-center touch-press">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-xl translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between p-6">
+    <div class="flex items-center justify-between pb-6 border-b border-white/10">
+      <img src="assets/logo.svg" alt="Autos Aragón" class="h-8">
+      <button id="close-drawer-btn" class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center">
+        <span class="material-symbols-outlined text-[24px]">close</span>
+      </button>
+    </div>
+
+    <nav class="flex flex-col gap-4 py-8 font-sora text-lg font-bold uppercase tracking-wider">
+      <a href="#inicio" onclick="document.getElementById('close-drawer-btn').click()" class="text-slate-300 hover:text-rose-500 py-2">Inicio</a>
+      <a href="#stock" onclick="document.getElementById('close-drawer-btn').click()" class="text-rose-400 py-2 flex items-center justify-between">
+        <span>Stock en Venta</span>
+        <span class="px-2 py-0.5 rounded-full bg-rose-500/20 text-xs font-mono">14 Coches</span>
+      </a>
+      <a href="#compramos-tu-coche" onclick="document.getElementById('close-drawer-btn').click()" class="text-slate-300 hover:text-rose-500 py-2">Compramos tu Coche</a>
+      <a href="#garantia" onclick="document.getElementById('close-drawer-btn').click()" class="text-slate-300 hover:text-rose-500 py-2">Garantía & Servicios</a>
+      <a href="#contacto" onclick="document.getElementById('close-drawer-btn').click()" class="text-slate-300 hover:text-rose-500 py-2">Contacto & Ubicación</a>
+    </nav>
+
+    <div class="space-y-3 pt-6 border-t border-white/10 font-mono text-xs">
+      <div class="text-slate-400">
+        <p class="text-white font-bold mb-1">AUTOS ARAGÓN</p>
+        <p>Calle Aragó nº 507-509, Barcelona</p>
+        <p>Lunes a Viernes: 10-14h y 17-20h (Cita previa)</p>
+      </div>
+      <a href="tel:932328715" class="w-full py-3 rounded-xl bg-rose-600 text-white font-sora font-bold text-center block uppercase">
+        Llamar al 93 232 87 15
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative overflow-hidden pt-8 pb-12 sm:pt-12 sm:pb-20 border-b border-white/5">
+      <!-- Ambient Glows -->
+      <div class="absolute top-0 right-1/4 w-80 sm:w-96 h-80 sm:h-96 rounded-full bg-rose-600/15 blur-[120px] pointer-events-none"></div>
+      <div class="absolute bottom-0 left-10 w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-blue-600/10 blur-[130px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <!-- Breadcrumb / Location Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/90 border border-white/10 shadow-md mb-6">
+          <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
+          <span class="font-mono text-[11px] sm:text-xs text-rose-400 font-bold uppercase tracking-wider">
+            Concesionario Multimarca • Barcelona Centro
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
+          <!-- Text Headline Column -->
+          <div class="lg:col-span-7 space-y-4 sm:space-y-6 text-left">
+            <h1 class="font-sora font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1] uppercase">
+              Vehículos de ocasión <br class="hidden sm:inline">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-rose-500 to-amber-400">seleccionados</span> con garantía en Barcelona
+            </h1>
+
+            <p class="font-manrope text-base sm:text-lg text-slate-300 max-w-xl leading-relaxed">
+              Empresa familiar con más de 30 años de experiencia en Carrer d'Aragó 507. Todos los vehículos revisados en taller propio, con <strong>12 meses de garantía nacional</strong> y los <strong>gastos de cambio de nombre incluidos</strong> sin costes ocultos.
+            </p>
+
+            <!-- CTA Action Buttons -->
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a href="#stock" class="px-6 py-3.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-sora font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2 shadow-xl shadow-rose-600/30 transition-all touch-press">
+                <span>Ver Stock Disponible (14)</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+              </a>
+
+              <a href="#compramos-tu-coche" class="px-5 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 font-sora font-semibold text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2 border border-white/10 transition-all touch-press">
+                <span class="material-symbols-outlined text-rose-400 text-[18px]">currency_exchange</span>
+                <span>Tasar mi coche</span>
+              </a>
+            </div>
+
+            <!-- Trust Metrics Bar -->
+            <div class="grid grid-cols-3 gap-3 pt-4 border-t border-white/10 max-w-lg font-mono text-xs text-slate-300">
+              <div>
+                <span class="block font-sora font-extrabold text-lg sm:text-xl text-white">+30 Años</span>
+                <span class="text-[11px] text-slate-400">Desde 1994</span>
+              </div>
+              <div class="border-l border-white/10 pl-3">
+                <span class="block font-sora font-extrabold text-lg sm:text-xl text-emerald-400">100% Revisados</span>
+                <span class="text-[11px] text-slate-400">150 Puntos Taller</span>
+              </div>
+              <div class="border-l border-white/10 pl-3">
+                <span class="block font-sora font-extrabold text-lg sm:text-xl text-white">0 € Gestión</span>
+                <span class="text-[11px] text-slate-400">Cambio nombre gratis</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Vehicle Card (Featured Car Preview) -->
+          <div class="lg:col-span-5">
+            <div class="glass-card rounded-2xl p-2 relative group overflow-hidden border border-white/10 shadow-2xl">
+              <div class="relative w-full aspect-[16/10] rounded-xl overflow-hidden bg-slate-900 cursor-pointer" onclick="window.openCarDetail('bmw-x1-2-0d-xdrive-m-sport-pro')">
+                <img src="assets/cars/bmw-x1-2-0d-xdrive-m-sport-pro/img_01.jpg" alt="BMW X1 M Sport Pro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                
+                <div class="absolute top-3 left-3 flex items-center gap-2">
+                  <span class="px-2.5 py-1 rounded-full bg-rose-600 text-white font-mono text-[10px] font-bold uppercase tracking-wider shadow-lg">
+                    Novedad Destacada
+                  </span>
+                  <span class="badge-eco px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase">
+                    Etiqueta ECO
+                  </span>
+                </div>
+
+                <div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+                  <div>
+                    <h3 class="font-sora font-bold text-white text-base sm:text-lg">BMW X1 2.0d xDrive M Sport Pro</h3>
+                    <p class="font-mono text-xs text-slate-300">Marzo 2024 • Solo 20.000 km</p>
+                  </div>
+                  <div class="text-right">
+                    <span class="font-sora font-extrabold text-white text-lg sm:text-xl">52.000 €</span>
+                    <span class="block font-mono text-[11px] text-rose-400">Desde 580 €/mes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STOCK CATALOG SECTION -->
+    <section id="stock" class="py-10 sm:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+              <span class="font-mono text-xs uppercase tracking-widest text-rose-400 font-bold">Catálogo Real en Tienda</span>
+            </div>
+            <h2 class="font-sora font-extrabold text-2xl sm:text-4xl text-white uppercase tracking-tight">
+              Stock de Vehículos
+            </h2>
+            <p class="font-manrope text-sm sm:text-base text-slate-400 mt-1">
+              Fotografías reales realizadas en nuestro concesionario. Entrega inmediata con ITV al día.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span id="cars-count" class="font-mono text-xs font-semibold px-3 py-1.5 rounded-full bg-slate-900 border border-white/10 text-slate-300">
+              Cargando catálogo...
+            </span>
+          </div>
+        </div>
+
+        <!-- Quick Filter Chips (Mobile horizontal scrollable) -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 scroll-snap-x">
+          <button class="filter-chip scroll-snap-item px-4 py-2 rounded-xl bg-rose-600 text-white font-sora font-semibold text-xs uppercase tracking-wider whitespace-nowrap border border-rose-500 transition-all touch-press" data-filter="all">
+            Todos (14)
+          </button>
+          <button class="filter-chip scroll-snap-item px-4 py-2 rounded-xl bg-slate-900 text-slate-300 hover:text-white font-sora font-semibold text-xs uppercase tracking-wider whitespace-nowrap border border-white/10 transition-all touch-press" data-filter="suv">
+            SUV & 4x4
+          </button>
+          <button class="filter-chip scroll-snap-item px-4 py-2 rounded-xl bg-slate-900 text-slate-300 hover:text-white font-sora font-semibold text-xs uppercase tracking-wider whitespace-nowrap border border-white/10 transition-all touch-press" data-filter="eco">
+            Híbrido ECO
+          </button>
+          <button class="filter-chip scroll-snap-item px-4 py-2 rounded-xl bg-slate-900 text-slate-300 hover:text-white font-sora font-semibold text-xs uppercase tracking-wider whitespace-nowrap border border-white/10 transition-all touch-press" data-filter="automatic">
+            Automático
+          </button>
+          <button class="filter-chip scroll-snap-item px-4 py-2 rounded-xl bg-slate-900 text-slate-300 hover:text-white font-sora font-semibold text-xs uppercase tracking-wider whitespace-nowrap border border-white/10 transition-all touch-press" data-filter="under20k">
+            Hasta 20.000 €
+          </button>
+          <button class="filter-chip scroll-snap-item px-4 py-2 rounded-xl bg-slate-900 text-slate-300 hover:text-white font-sora font-semibold text-xs uppercase tracking-wider whitespace-nowrap border border-white/10 transition-all touch-press flex items-center gap-1.5" data-filter="favs">
+            <span class="material-symbols-outlined text-[15px] text-rose-500">favorite</span>
+            <span>Favoritos</span>
+          </button>
+        </div>
+
+        <!-- Search & Advanced Filter Cockpit -->
+        <div class="glass-panel rounded-2xl p-4 sm:p-5 mt-4 mb-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3">
+            <!-- Search bar -->
+            <div class="sm:col-span-2 lg:col-span-2 relative">
+              <span class="material-symbols-outlined absolute left-3 top-3 text-slate-400 text-[20px]">search</span>
+              <input type="text" id="search-input" placeholder="Buscar por marca, modelo, motor..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900/90 text-white placeholder-slate-500 border border-white/10 focus:outline-none focus:border-rose-500 text-xs sm:text-sm font-manrope">
+            </div>
+
+            <!-- Brand Select -->
+            <div>
+              <select id="filter-brand" class="w-full py-2.5 px-3 rounded-xl bg-slate-900/90 text-slate-200 border border-white/10 focus:outline-none focus:border-rose-500 text-xs sm:text-sm font-mono cursor-pointer">
+                <option value="all">Todas las marcas</option>
+              </select>
+            </div>
+
+            <!-- Body Type -->
+            <div>
+              <select id="filter-body" class="w-full py-2.5 px-3 rounded-xl bg-slate-900/90 text-slate-200 border border-white/10 focus:outline-none focus:border-rose-500 text-xs sm:text-sm font-mono cursor-pointer">
+                <option value="all">Carrocería</option>
+                <option value="suv">SUV / Crossover</option>
+                <option value="compacto">Compacto</option>
+                <option value="urbano">Urbano</option>
+                <option value="familiar">Familiar</option>
+              </select>
+            </div>
+
+            <!-- Fuel Type -->
+            <div>
+              <select id="filter-fuel" class="w-full py-2.5 px-3 rounded-xl bg-slate-900/90 text-slate-200 border border-white/10 focus:outline-none focus:border-rose-500 text-xs sm:text-sm font-mono cursor-pointer">
+                <option value="all">Combustible</option>
+                <option value="eco">Híbrido ECO</option>
+                <option value="gasolina">Gasolina</option>
+                <option value="diesel">Diésel</option>
+              </select>
+            </div>
+
+            <!-- Sort Select -->
+            <div>
+              <select id="sort-select" class="w-full py-2.5 px-3 rounded-xl bg-slate-900/90 text-slate-200 border border-white/10 focus:outline-none focus:border-rose-500 text-xs sm:text-sm font-mono cursor-pointer">
+                <option value="featured">Ordenar por</option>
+                <option value="price-asc">Precio: más barato</option>
+                <option value="price-desc">Precio: más alto</option>
+                <option value="km-asc">Menos kilómetros</option>
+                <option value="year-desc">Año más nuevo</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Price Slider Subrow -->
+          <div class="mt-4 pt-3 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3 w-full sm:w-80">
+              <span class="text-xs font-mono text-slate-400 whitespace-nowrap">Precio máx:</span>
+              <input type="range" id="price-slider" min="10000" max="60000" step="2000" value="60000" class="w-full accent-rose-500 h-1.5 bg-slate-800 rounded cursor-pointer">
+              <span id="price-slider-display" class="text-xs font-mono font-bold text-white whitespace-nowrap">60.000 €</span>
+            </div>
+
+            <button id="reset-all-btn" class="text-xs font-mono text-slate-400 hover:text-rose-400 transition-colors flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">restart_alt</span>
+              <span>Restablecer filtros</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARS GRID CONTAINER -->
+        <div id="cars-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Cards rendered by app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COMPRAMOS TU COCHE (VALUATION SECTION) -->
+    <section id="compramos-tu-coche" class="py-12 sm:py-20 bg-gradient-to-b from-slate-950 via-slate-900 to-canvas border-y border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left Pitch Column -->
+          <div class="lg:col-span-6 space-y-4 sm:space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+              <span class="material-symbols-outlined text-emerald-400 text-[16px]">payments</span>
+              <span class="font-mono text-xs text-emerald-400 uppercase font-bold tracking-wider">Tasación al Instante</span>
+            </div>
+
+            <h2 class="font-sora font-extrabold text-2xl sm:text-4xl text-white uppercase tracking-tight">
+              ¿Quieres vender tu coche? <br>
+              <span class="text-emerald-400">Te lo compramos hoy</span> al mejor precio
+            </h2>
+
+            <p class="font-manrope text-sm sm:text-base text-slate-300 leading-relaxed">
+              En <strong>Autos Aragón</strong> hacemos que la venta de tu coche sea rápida, segura y sin complicaciones. Valoración inmediata al pasar por nuestras instalaciones en Carrer d'Aragó 507.
+            </p>
+
+            <!-- Benefits List -->
+            <div class="space-y-3 font-manrope text-sm text-slate-200">
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-white/5">
+                <span class="material-symbols-outlined text-emerald-400 text-xl shrink-0 mt-0.5">verified</span>
+                <div>
+                  <strong class="text-white block font-sora">Pago al contado inmediato</strong>
+                  <span class="text-xs text-slate-400">Sin intermediarios ni esperas. Dinero disponible al instante.</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-white/5">
+                <span class="material-symbols-outlined text-emerald-400 text-xl shrink-0 mt-0.5">description</span>
+                <div>
+                  <strong class="text-white block font-sora">Cambio de nombre en gestoría gratis</strong>
+                  <span class="text-xs text-slate-400">Nos ocupamos de todos los trámites el mismo día a nuestro cargo. Te evitas problemas futuros de multas o impuestos.</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-white/5">
+                <span class="material-symbols-outlined text-emerald-400 text-xl shrink-0 mt-0.5">location_on</span>
+                <div>
+                  <strong class="text-white block font-sora">Instalaciones céntricas en Barcelona</strong>
+                  <span class="text-xs text-slate-400">Ven directamente a Carrer d'Aragó 507 con tu vehículo para tasarlo en 10 minutos.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Valuation Form Column -->
+          <div class="lg:col-span-6">
+            <div class="glass-panel rounded-2xl p-6 sm:p-8 border border-white/10 shadow-2xl relative">
+              <div class="flex items-center justify-between mb-5">
+                <h3 class="font-sora font-bold text-lg sm:text-xl text-white uppercase tracking-wider">Calcula la Tasación</h3>
+                <span class="text-xs font-mono text-slate-400">Paso 1 de 2</span>
+              </div>
+
+              <form id="valuation-form" class="space-y-4">
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label class="block text-xs font-mono text-slate-400 uppercase mb-1">Marca</label>
+                    <input type="text" id="val-brand" required placeholder="Ej. Seat, Toyota" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 text-white placeholder-slate-600 border border-white/10 focus:outline-none focus:border-emerald-500 text-xs sm:text-sm font-manrope">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono text-slate-400 uppercase mb-1">Modelo</label>
+                    <input type="text" id="val-model" required placeholder="Ej. León, Corolla" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 text-white placeholder-slate-600 border border-white/10 focus:outline-none focus:border-emerald-500 text-xs sm:text-sm font-manrope">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label class="block text-xs font-mono text-slate-400 uppercase mb-1">Año</label>
+                    <input type="number" id="val-year" min="2005" max="2025" value="2019" required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 text-white border border-white/10 focus:outline-none focus:border-emerald-500 text-xs sm:text-sm font-mono">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono text-slate-400 uppercase mb-1">Kilómetros</label>
+                    <input type="number" id="val-km" step="5000" value="65000" required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 text-white border border-white/10 focus:outline-none focus:border-emerald-500 text-xs sm:text-sm font-mono">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono text-slate-400 uppercase mb-1">Teléfono o WhatsApp</label>
+                  <input type="tel" id="val-phone" required placeholder="600 000 000" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 text-white placeholder-slate-600 border border-white/10 focus:outline-none focus:border-emerald-500 text-xs sm:text-sm font-mono">
+                </div>
+
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-sora font-bold text-xs sm:text-sm uppercase tracking-wider shadow-lg shadow-emerald-600/30 transition-all touch-press flex items-center justify-center gap-2">
+                  <span>Obtener Tasación Inmediata</span>
+                  <span class="material-symbols-outlined text-[18px]">calculate</span>
+                </button>
+              </form>
+
+              <!-- Dynamic Valuation Result Box -->
+              <div id="valuation-result" class="mt-4 hidden"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARANTEE & ABOUT SECTION -->
+    <section id="garantia" class="py-12 sm:py-20 border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        <div class="max-w-2xl mx-auto text-center mb-12">
+          <span class="font-mono text-xs uppercase tracking-widest text-rose-400 font-bold">Compromiso Autos Aragón</span>
+          <h2 class="font-sora font-extrabold text-2xl sm:text-4xl text-white uppercase tracking-tight mt-2">
+            Por Qué Elegirnos
+          </h2>
+          <p class="font-manrope text-sm sm:text-base text-slate-400 mt-2">
+            La tranquilidad de comprar a un concesionario familiar consolidado en el corazón de Barcelona.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="glass-card rounded-2xl p-6 flex flex-col items-start">
+            <div class="w-12 h-12 rounded-xl bg-rose-600/20 text-rose-400 flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-2xl">verified_user</span>
+            </div>
+            <h3 class="font-sora font-bold text-base text-white uppercase mb-2">12 Meses Garantía</h3>
+            <p class="font-manrope text-xs sm:text-sm text-slate-400 leading-relaxed">
+              Cobertura completa nacional en cualquier taller de España. Asistencia en carretera y tranquilidad total.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 flex flex-col items-start">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-2xl">build</span>
+            </div>
+            <h3 class="font-sora font-bold text-base text-white uppercase mb-2">150 Puntos Revisión</h3>
+            <p class="font-manrope text-xs sm:text-sm text-slate-400 leading-relaxed">
+              Inspección exhaustiva mecánica, electrónica, frenos, neumáticos y diagnosis antes de cada entrega.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 flex flex-col items-start">
+            <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-2xl">account_balance_wallet</span>
+            </div>
+            <h3 class="font-sora font-bold text-base text-white uppercase mb-2">Financiación al 100%</h3>
+            <p class="font-manrope text-xs sm:text-sm text-slate-400 leading-relaxed">
+              Planes flexibles sin entrada, desde 24 hasta 96 meses con las mejores condiciones bancarias.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 flex flex-col items-start">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-2xl">history_edu</span>
+            </div>
+            <h3 class="font-sora font-bold text-base text-white uppercase mb-2">Cambio de Nombre Gratis</h3>
+            <p class="font-manrope text-xs sm:text-sm text-slate-400 leading-relaxed">
+              Gastos de gestoría y tasas de tráfico DGT incluidos sin letra pequeña ni sorpresas en el precio final.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT & LOCATION SECTION -->
+    <section id="contacto" class="py-12 sm:py-20 bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Contact Details (5 cols) -->
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <span class="font-mono text-xs uppercase tracking-widest text-rose-400 font-bold">Ven a Visitarnos</span>
+              <h2 class="font-sora font-extrabold text-2xl sm:text-3xl text-white uppercase tracking-tight mt-1">
+                Concesionario & Showroom
+              </h2>
+              <p class="font-manrope text-sm text-slate-400 mt-2">
+                Estamos en pleno Eixample / Clot de Barcelona, con fácil acceso en metro, autobús o vehículo propio.
+              </p>
+            </div>
+
+            <div class="space-y-4 font-mono text-xs">
+              <!-- Address -->
+              <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-900 border border-white/5">
+                <span class="material-symbols-outlined text-rose-500 text-xl shrink-0 mt-0.5">pin_drop</span>
+                <div>
+                  <span class="text-slate-400 uppercase text-[10px] block">Dirección</span>
+                  <span class="text-white font-bold text-sm block">Calle Aragó nº 507 - 509</span>
+                  <span class="text-slate-400">08013 Barcelona, España</span>
+                  <div class="mt-2">
+                    <a href="https://maps.google.com/?q=Carrer+d'Aragó,+507,+08013+Barcelona" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-rose-400 hover:underline">
+                      <span>Abrir ruta en Google Maps</span>
+                      <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Schedule -->
+              <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-900 border border-white/5">
+                <span class="material-symbols-outlined text-rose-500 text-xl shrink-0 mt-0.5">schedule</span>
+                <div>
+                  <span class="text-slate-400 uppercase text-[10px] block">Horario de Atención</span>
+                  <span class="text-white font-bold block">Lunes a Viernes</span>
+                  <span class="text-slate-300">10:00h a 14:00h  |  17:00h a 20:00h</span>
+                  <span class="text-slate-400 block text-[11px] mt-1">* Se recomienda cita previa para atención personalizada.</span>
+                </div>
+              </div>
+
+              <!-- Phone & Email -->
+              <div class="grid grid-cols-2 gap-3">
+                <a href="tel:932328715" class="p-3.5 rounded-xl bg-slate-900 border border-white/5 hover:border-rose-500/50 transition-all flex flex-col">
+                  <span class="text-slate-400 uppercase text-[10px]">Teléfono</span>
+                  <span class="text-white font-bold text-sm mt-1">93 232 87 15</span>
+                </a>
+                <a href="mailto:info@autosaragon.com" class="p-3.5 rounded-xl bg-slate-900 border border-white/5 hover:border-rose-500/50 transition-all flex flex-col">
+                  <span class="text-slate-400 uppercase text-[10px]">Email</span>
+                  <span class="text-white font-bold text-xs mt-1 truncate">info@autosaragon.com</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- WhatsApp Direct Button -->
+            <a href="https://wa.me/34932328715?text=Hola%20Autos%20Arag%C3%B3n,%20quisiera%20pedir%20cita%20para%20visitar%20el%20concesionario." target="_blank" rel="noopener" class="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-sora font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30 transition-all touch-press">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.392-10.416c-4.418 0-8 3.582-8 8 0 1.411.365 2.738 1.002 3.896l-1.064 3.89 3.987-1.046c1.118.608 2.399.96 3.757.96 4.418 0 8-3.582 8-8s-3.582-8-8-8z"/></svg>
+              <span>Pedir Cita Previa por WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Interactive Google Maps (7 cols) -->
+          <div class="lg:col-span-7 h-[360px] sm:h-[420px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
+            <iframe 
+              src="https://maps-api-ssl.google.com/maps?hl=es&ll=41.404945,2.181737&output=embed&q=Carrer+d'Arag%C3%B3,+507,+08013+Barcelona,+Espa%C3%B1a+(Autos+Arag%C3%B3n)&z=16" 
+              class="w-full h-full border-0 grayscale contrast-125 opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-500" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            
+            <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 text-[11px] font-mono text-slate-300">
+              Metro L2 Encants / L1-L2 Clot
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-8 bg-black border-t border-white/10 text-center font-mono text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <img src="assets/logo.svg" alt="Autos Aragón" class="h-6 opacity-70">
+        <span>© 1994 - 2026 Autos Aragón S.L.</span>
+      </div>
+
+      <div class="flex items-center gap-4 text-[11px]">
+        <a href="#" class="hover:text-slate-300">Aviso Legal</a>
+        <a href="#" class="hover:text-slate-300">Privacidad</a>
+        <a href="#" class="hover:text-slate-300">Cookies</a>
+        <a href="https://www.autosaragon.com" target="_blank" class="hover:text-rose-400">Web Original</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY MOBILE BOTTOM BAR (MOBILE FIRST ULTRA-FAST NAVIGATION) -->
+  <nav class="fixed bottom-0 left-0 right-0 z-40 lg:hidden glass-panel border-t border-white/10 safe-bottom">
+    <div class="grid grid-cols-4 h-16">
+      <!-- Stock -->
+      <a href="#stock" class="flex flex-col items-center justify-center gap-1 text-slate-300 hover:text-white transition-colors touch-press">
+        <span class="material-symbols-outlined text-[20px] text-rose-500">directions_car</span>
+        <span class="font-sora text-[10px] font-semibold uppercase">Stock</span>
+      </a>
+
+      <!-- Tasar -->
+      <a href="#compramos-tu-coche" class="flex flex-col items-center justify-center gap-1 text-slate-300 hover:text-white transition-colors touch-press">
+        <span class="material-symbols-outlined text-[20px] text-amber-400">currency_exchange</span>
+        <span class="font-sora text-[10px] font-semibold uppercase">Tasar</span>
+      </a>
+
+      <!-- Call -->
+      <a href="tel:932328715" class="flex flex-col items-center justify-center gap-1 text-slate-300 hover:text-white transition-colors touch-press">
+        <span class="material-symbols-outlined text-[20px] text-sky-400">call</span>
+        <span class="font-sora text-[10px] font-semibold uppercase">Llamar</span>
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/34932328715?text=Hola%20Autos%20Arag%C3%B3n,%20quisiera%20consultar%20por%20sus%20coches%20en%20stock." target="_blank" rel="noopener" class="flex flex-col items-center justify-center gap-1 text-emerald-400 hover:text-emerald-300 transition-colors touch-press">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.392-10.416c-4.418 0-8 3.582-8 8 0 1.411.365 2.738 1.002 3.896l-1.064 3.89 3.987-1.046c1.118.608 2.399.96 3.757.96 4.418 0 8-3.582 8-8s-3.582-8-8-8z"/></svg>
+        <span class="font-sora text-[10px] font-semibold uppercase">Chat</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- CAR DETAIL MODAL (SLIDE-UP SHEET ON MOBILE, MODAL ON DESKTOP) -->
+  <div id="car-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <!-- Backdrop -->
+    <div id="modal-overlay" class="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity"></div>
+
+    <!-- Modal Box -->
+    <div class="relative w-full max-w-5xl max-h-[92vh] sm:max-h-[90vh] bg-surface rounded-t-3xl sm:rounded-3xl border-t sm:border border-white/15 shadow-2xl overflow-y-auto no-scrollbar p-5 sm:p-8 z-10 animate-fade-in">
+      
+      <!-- Close Button -->
+      <button id="close-modal-btn" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-900 border border-white/10 text-white flex items-center justify-center hover:bg-rose-600 transition-colors z-20 touch-press">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+
+      <!-- Dynamic Content Box -->
+      <div id="modal-body-content"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
